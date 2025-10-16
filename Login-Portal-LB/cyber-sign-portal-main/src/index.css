@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Navy Blue Background */
+    --background: 210 100% 20%;
+    --foreground: 0 0% 100%;
+
+    /* Card with subtle gradient */
+    --card: 210 100% 15%;
+    --card-foreground: 0 0% 100%;
+
+    /* Popover */
+    --popover: 210 100% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Cyan Primary */
+    --primary: 180 100% 50%;
+    --primary-foreground: 210 100% 20%;
+
+    /* Purple Accent */
+    --secondary: 277 89% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted colors */
+    --muted: 210 100% 25%;
+    --muted-foreground: 0 0% 80%;
+
+    /* Purple Accent for icons and errors */
+    --accent: 277 89% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive (error messages in purple) */
+    --destructive: 277 89% 36%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders with subtle cyan tint */
+    --border: 210 50% 30%;
+    --input: 210 50% 25%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-navy: linear-gradient(135deg, hsl(210, 100%, 20%) 0%, hsl(210, 100%, 15%) 100%);
+    --gradient-cyan: linear-gradient(135deg, hsl(180, 100%, 50%) 0%, hsl(180, 100%, 40%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(277, 89%, 36%) 0%, hsl(277, 89%, 30%) 100%);
+    
+    /* Shadows with cyan glow */
+    --shadow-cyan: 0 0 20px hsl(180 100% 50% / 0.3);
+    --shadow-purple: 0 0 15px hsl(277 89% 36% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 210 100% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 210 100% 20%;
+    --sidebar-accent: 277 89% 36%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 50% 30%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .dark {
+    --background: 210 100% 20%;
+    --foreground: 0 0% 100%;
+    --card: 210 100% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 100% 15%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 210 100% 20%;
+    --secondary: 277 89% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 100% 25%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 277 89% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 277 89% 36%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 50% 30%;
+    --input: 210 50% 25%;
+    --ring: 180 100% 50%;
+    --sidebar-background: 210 100% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 210 100% 20%;
+    --sidebar-accent: 277 89% 36%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 50% 30%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
